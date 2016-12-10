@@ -284,6 +284,7 @@
 .am-tabs-bd .am-tab-panel{
     padding:0;
 }
+.am-btn-default.am-active,
 .am-article-property .am-btn.am-active,
 .am-get-catid .am-btn.am-active{
     background-color: #0c80ba !important;
@@ -364,4 +365,11 @@
 }
 .am-widget-color:hover {
     color: #fff !important;
+}
+.am-form-group{
+    margin-bottom: 1rem;
+}
+#catidtop>.am-btn,
+#sub-catid>.am-btn{
+    margin-bottom: .5rem;
 }

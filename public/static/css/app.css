@@ -455,3 +455,45 @@ a:hover{
 .am-panel-default {
     border:1px solid #eee;
 }
+.am-list-aside-category{
+    margin: 0;
+    font-size: 1.4rem;
+}
+.am-list-aside-category>li{
+    border-color: #e1e4eb;
+}
+.am-list-aside-category>li:first-child{
+    border-top: none;
+}
+.am-list-aside-category>li:last-child{
+    border-bottom: none;
+}
+.am-list-aside-category>li>a {
+    padding-top: .65rem;
+    padding-bottom: .65rem;
+}
+.am-list-aside-category>li>a:after{
+    content: "\f105";
+    position: absolute;
+    right:1rem;
+}
+.am-item-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #2a8c70;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 1rem;
+}
+.am-list-aside-category>li>a:hover{
+    background-color: #f6f6f6;
+    transition-duration: 500ms;
+    color: #2a8c70;
+}
+.am-panel-default .am-panel-hd{
+    border-bottom: 1px solid #e1e4eb;
+}

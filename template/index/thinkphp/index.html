@@ -1,8 +1,40 @@
 {extend name="common/index"/}
-{block name="title"}{/block}
+{block name="title"}{$channel.title} - {/block}
 {block name="top_right"}
 {include file="common/user_status"}
 {/block}
+{block name="article_header"}
+<div class="am-article-bar">
+    <div class="am-container">
+        <h1 class="am-article-title">{$channel.title}</h1>
+        <div class="am-article-tag am-text-sm am-text-note">
+            {volist name="category" id="vo"}
+            {neq name="vo.pid" value="0"}
+            <a href="{$vo.id|reurl='thinkphp/tag'}" class="am-tag">{$vo.title}</a>
+            {/neq}
+            {/volist}
+        </div>
+    </div>
+</div>
+{/block}
 {block name="content"}
+<div class="am-g">
+    <div class="am-u-sm-9 am-padding-right-0">
+        <section class="am-panel am-panel-default">
+            <div class="am-panel-bd">
+
+            </div>
+        </section>
+
+    </div>
+    <div class="am-u-sm-3">
+        <section class="am-panel am-panel-warning">
+            <div class="am-panel-bd">
+                面板内容
+            </div>
+        </section>
+
+    </div>
+</div>
 {/block}
 {block name="js"}{/block}

@@ -38,7 +38,11 @@ class Posts extends Common
     }
     public function get_category(){
         $id = input('get.id');
-        $data = Category::category($id);
-        $this->result($data,200,'分类返回成功');
+        $data = Category::search('pid',$id);
+        if($data){
+            $this->result($data,200,'分类返回成功');
+        }else{
+            $this->result('',404,'未找到二级分类');
+        }
     }
 }

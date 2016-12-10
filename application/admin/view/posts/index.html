@@ -44,22 +44,24 @@
         </div>
     </div>
     <div class="am-form-group">
-        <label for="catid" class="am-form-label">分类</label>
-        <div class="">
-            <input type="hidden" name="catid" value="">
-            <div class="am-btn-group am-btn-group-sm" id="catid">
-                {volist name="category" id="vo"}
-                    <span class="am-btn am-btn-default" data-catid="{$vo.id}">{$vo.title}</span>
-                {/volist}
-            </div>
+        <label for="catidtop" class="am-form-label">分类</label>
+        <input type="hidden" name="catid" value="">
+        <div class="am-btn-group-sm" id="catidtop">
+            {volist name="category" id="vo"}
+                <span class="am-btn am-btn-default" data-catid="{$vo.id}">{$vo.title}</span>
+            {/volist}
         </div>
     </div>
+    <div class="am-form-group" style="display: none" id="sub-catid">
+        <label for="catid" class="am-form-label">二级分类</label>
+        <div class="am-btn-group-sm" id="catid"></div>
+    </div>
     <div class="am-form-group">
-        <label for="catid" class="am-form-label">关键字</label>
+        <label for="catid" class="am-form-label">关键字(多个关键字用分号隔开)</label>
         <input type="text" name="keywords" value="" class="am-input-sm">
     </div>
     <div class="am-form-group">
-        <label for="message" class="am-form-label">正文</label>
+        <label for="message" class="am-form-label">内容区域</label>
         <textarea name="message" id="message" style="height:400px;max-height:700px;"></textarea>
     </div>
 
@@ -112,7 +114,23 @@
             $('[name="color"]').val(color);
             $('.am-widget-color').css('background-color',color);
             $('[name="subject"]').css('color',color);
-
+        })
+        $(document).on('click','[data-catid]',function(){
+            var catid = $(this).data('catid');
+            var _cont = $('#catid');
+            $(this).addClass('am-active').siblings('.am-btn').removeClass('am-active');
+            $.get("{:url('get_category')}",{id:catid},function(res){
+                if(res.code != 200){
+                    $('[name="catid"]').val(catid);
+                    //$('#sub-catid').fadeOut();
+                }else {
+                    _cont.find('span').remove();
+                    $('#sub-catid').fadeIn();
+                    $.each(res.data,function(i,vo){
+                        _cont.append('<span class="am-btn am-btn-default" data-catid="'+vo.id+'">'+vo.title+'</span>');
+                    })
+                }
+            })
         })
     })
 </script>
