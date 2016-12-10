@@ -11,36 +11,31 @@
 
 return [
     //博客
-    'blog/tag/:value' => 'index/blog/lists',
-    'blog/:id' => 'index/blog/article',
-    'blog' => 'index/blog/index',
+    'topic/:id' => 'index/blog/article',
+    'topic' => 'index/blog/index',
 
     //模板
-    'template/tag/:value' => 'index/template/lists',
     'template/:id' => 'index/template/article',
     'template' => 'index/template/index',
 
     //jquery
-    'jquery/tag/:value' => 'index/jquery/lists',
     'jquery/:id' => 'index/jquery/article',
     'jquery' => 'index/jquery/index',
 
     //thinkphp
-    'thinkphp/tag/:value' => 'index/thinkphp/lists',
-    'thinkphp/:id' => 'index/thinkphp/article',
-    'thinkphp' => 'index/thinkphp/index',
+    'php/:id' => 'index/thinkphp/article',
+    'php' => 'index/thinkphp/index',
 
     //问答
-    'wenda/tag/:value' => 'index/wenda/lists',
     'wenda/:id' => 'index/wenda/article',
     'wenda' => 'index/wenda/index',
 
     //工具箱
-    'tools/tag/:value' => 'index/tools/lists',
     'tools/:id' => 'index/tools/article',
     'tools' => 'index/tools/index',
 
-    'page/:id'   => ['page/index', ['method' => 'get'], ['id' => '\w+']],
+    'page/:id'   => ['page/index', ['method' => 'get'], ['id' => '\d+']],
+    'ta/:id'    => ['index/index/ta',['method' => 'get'], ['id' => '\d+']],
 
     //用户信息
     'api_user_user_login' => 'user/account/user_login',

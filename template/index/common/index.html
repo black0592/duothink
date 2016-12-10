@@ -32,7 +32,7 @@
             </div>
             <div class="am-u-sm-3 am-text-right am-user-status">
                 <form action="/search" method="POST" role="form" class="am-form am-header-search">
-                    <input type="text" id="" class="am-radius am-border-0" placeholder="关键字搜索">
+                    <input type="text" id="" class="am-radius" placeholder="关键字搜索">
                     <button type="submit" class="am-icon-search"></button>
                 </form>
             </div>
@@ -42,6 +42,19 @@
         </div>
     </div>
 </header>
+<nav class="am-nav-bar">
+    <div class="am-container">
+        <ul class="am-nav am-nav-pills">
+            <li><a href="#" class="am-icon-home"> 首页</a></li>
+            {volist name="navcategory" id="vo"}
+            {neq name="vo.pid" value="0"}
+            <li><a href="{$vo.id|reurl='ta'}">{$vo.title}</a></li>
+            {/neq}
+            {/volist}
+            <a href="/all_category.html" class="am-all-category"><em></em> <em></em> <em></em></a>
+        </ul>
+    </div>
+</nav>
 {block name="article_header"}{/block}
 <div class="am-container am-padding-top">
     {block name="content"}{/block}

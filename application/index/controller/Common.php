@@ -1,5 +1,6 @@
 <?php
 namespace app\index\controller;
+use app\api\Category;
 use think\Controller;
 
 /**
@@ -17,5 +18,6 @@ class Common extends Controller {
         $this->assign('config', Api::config()); //全局配置加载
         $this->assign('navigation', unlimitedForChild(Api::navigation())); //全局顶部导航
         $this->assign('action',request()->action());
+        $this->assign('navcategory',unlimitedForLevel(Category::datalist()));
     }
 }

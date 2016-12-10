@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{block name="title"}{/block}{$config.sitename}</title>
+    <title>用户登录/注册 - {$config.sitename}</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="max-age=600"/>
     <meta http-equiv="Cache-Version" content="{:vcs(1)}"/>
@@ -16,7 +16,7 @@
         .am-panel-account {
             width: 600px;
             margin: 4rem auto 0 auto;
-            border:none;
+            border:1px solid #f6f6f6;
         }
         .am-panel-account .am-panel-hd {
             padding:0;
@@ -74,6 +74,23 @@
         </div>
     </div>
 </header>
+<nav class="am-nav-bar">
+    <div class="am-container">
+        <ul class="am-nav am-nav-pills">
+            <li><a href="#" class="am-icon-home"> 首页</a></li>
+            {volist name="navcategory" id="vo"}
+            {neq name="vo.pid" value="0"}
+            <li><a href="{$vo.id|reurl='ta'}">{$vo.title}</a></li>
+            {/neq}
+            {/volist}
+            <a href="/all_category.html" class="am-all-category"><em></em> <em></em> <em></em></a>
+        </ul>
+    </div>
+</nav>
+<div class="am-article-bar am-text-center">
+    <img src="__i__/user.svg" alt="" width="48" height="48">
+    <div class="am-text-xl">用户登录 / 注册</div>
+</div>
 <div class="am-container">
     <section class="am-panel am-panel-account">
         <header class="am-panel-hd">
