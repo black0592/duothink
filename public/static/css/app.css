@@ -547,3 +547,59 @@ a:hover{
 .am-panel-default .am-panel-hd{
     border-bottom: 1px solid #e1e4eb;
 }
+.am-user-bar {
+    background-color: #f6f6f6;
+    padding:40px 0 0;
+}
+.am-user-avatar {
+    width: 160px;
+    height: 160px;
+    margin-right: 1.5rem;
+}
+.am-user-profile>h2{
+    font-size:3rem;
+    font-weight: 400;
+    margin: 0;
+}
+.am-profile-score>a{
+    background: #dff0d8;
+    border: 1px solid #5cb85c;
+    border-radius: 100px;
+    font-size: 14px;
+    color: #43894e;
+    padding: 4px 12px;
+    line-height: 1.2;
+    display: inline-block;
+    font-weight: 400;
+    height: 30px;
+}
+.am-profile-score>a>img{
+    vertical-align: middle;
+}
+.am-panel-profile {
+    height: 200px;
+    margin-bottom: 0;
+    border-radius: 2px 2px 0 0;
+    overflow: hidden;
+    box-shadow: none;
+    background-color: #eee;
+    border: none;
+}
+.am-panel-profile .am-panel-hd{
+    background-color: #e3e3e3;
+}
+.am-profile-window-dot>em {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 20px;
+}
+.am-item-danger {
+    background-color: #ff5f57;
+}
+.am-item-warning{
+    background-color: #ffbd2e;
+}
+.am-item-success{
+    background-color: #28ca42;
+}
