@@ -37,7 +37,7 @@
                 </form>
             </div>
             <div class="am-u-sm-2 am-text-right am-user-status">
-               {block name="top_right"}{/block}
+               {include file="common/user_status"}
             </div>
         </div>
     </div>
@@ -45,10 +45,10 @@
 <nav class="am-nav-bar">
     <div class="am-container">
         <ul class="am-nav am-nav-pills">
-            <li><a href="#" class="am-icon-home"> 首页</a></li>
+            <li class="am-list-header"><a href="http://{:request()->host()}" class="am-icon-home"> 首页</a></li>
             {volist name="navcategory" id="vo"}
             {neq name="vo.pid" value="0"}
-            <li><a href="{$vo.id|reurl='ta'}">{$vo.title}</a></li>
+            <li><a href="{$vo.id|ctUrl}">{$vo.title}</a></li>
             {/neq}
             {/volist}
             <a href="/all_category.html" class="am-all-category"><em></em> <em></em> <em></em></a>

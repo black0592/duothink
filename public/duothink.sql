@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 120.24.2.27
-Source Server Version : 50621
-Source Host           : 120.24.2.27:3306
-Source Database       : duothink.material
+Source Server         : 127.0.0.1
+Source Server Version : 50716
+Source Host           : localhost:3306
+Source Database       : www.duothink.com
 
 Target Server Type    : MYSQL
-Target Server Version : 50621
+Target Server Version : 50716
 File Encoding         : 65001
 
-Date: 2016-12-08 09:27:03
+Date: 2016-12-12 14:16:26
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -52,7 +52,7 @@ INSERT INTO `think_article` VALUES ('5', '5e93642091b98b50b13e327472dbaf2e', '1'
 INSERT INTO `think_article` VALUES ('6', '5635b616168c99ff780073e167c46d33', '1', '18', '201', '微信小程序开放公测 企业、政府及媒体可申请', '程序开发,公开课,开发者,公测,内测', '11月3日晚间，微信团队对外宣布，微信小程序开放公测，开发者可登陆微信公众平台申请，开发完成后可以提交审核，公测期间暂不能发布。根据微信团队的介绍，开放注册范围', '&lt;p&gt;&lt;img src=&quot;/attach/c9\\522a89bacb2117ac0295f9531b6fccfa427966.jpeg&quot; style=&quot;max-width:100%;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;11月3日晚间，微信团队对外宣布，微信小程序开放公测，开发者可登陆微信公众平台申请，开发完成后可以提交审核，公测期间暂不能发布。&lt;/p&gt;&lt;p&gt;根据微信团队的介绍，开放注册范围为企业、政府、媒体及其他组织，注册方式为，登陆微信公众平台注册小程序，完成注册后可同步进行信息完善和开发。填写小程序的基本信息包括名称、头像、介绍及服务范围等。&lt;/p&gt;&lt;p&gt;完成小程序开发者绑定、开发信息配置后，开发者可下载开发者工具，参考开发文档进行开发和调试。完成小程序开发后，提交代码至微信团队审核，审核通过后即可发布（公测期间不能发布）。&lt;/p&gt;&lt;p&gt;9月22日凌晨，微信公众平台开始陆续对外发送小程序内测邀请。小程序即被外界广为关注的微信&ldquo;应用号&rdquo;。首批内测名额在200个左右。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;在今年1月11日举行的微信公开课PRO版上，张小龙在演讲中提到：微信的本意并不是要做成一个只是传播内容的平台，而是要做一个提供服务的平台所以微信团队专门拆出了服务号，但服务号以提供服务为主，基于一个诉求，&ldquo;这不是我们想看到的。现在我们将开发一个新的形态，叫做应用号。&rdquo;&lt;/p&gt;&lt;p&gt;根据张小龙的描述，应用号的形态大致为：&ldquo;一种新的公众号形态，这种形态下面用户关注了一个公众号，就像安装了一个APP一样。他要找这个公众号的时候就像找一个APP，在平时这个号不会向用户发东西的，所以APP就会很安静的存在那里，等用户需要的时候找到它就好了，这样的话我们可以尝试做到让更多的APP有一种更轻量的形态，但是又更好使用的一种形态来存在，这是我们在探讨的一种新的公众号形态，叫应用号，这里只是提前剧透一点点东西。&rdquo;&lt;/p&gt;&lt;p&gt;&lt;/p&gt;&lt;p&gt;从内测信息来看，小程序在通过向开发者开放多种服务及支撑能力以实现以上设想，主要面向开发者。&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', './attach/thumb/85be9ff51e96d9c1c4d583ba33a4303e3be59642.jpg', null, '1478240560', '35', '0', '0', '1');
 INSERT INTO `think_article` VALUES ('7', '197d5e37e3ad4f94d07e850bd9eb171a', '1', '18', '201', '如果你需要在控制器中进行验', 'message,require,控制器,result,email', '如果你需要在控制器中进行验证，并且继承了\\think\\Controller的话，可以调用控制器类提供的validate方法进行验证，如下：$result=$th', '&lt;h1&gt;&lt;p&gt;如果你需要在控制器中进行验证，并且继承了\\think\\Controller的话，可以调用控制器类提供的validate方法进行验证，如下：&lt;/p&gt;&lt;pre&gt;&lt;code&gt;$result = $this-&amp;gt;validate(\r\n    [\r\n        \'name\'  =&amp;gt; \'thinkphp\',\r\n        \'email\' =&amp;gt; \'thinkphp@qq.com\',\r\n    ],\r\n    [\r\n        \'name\'  =&amp;gt; \'require|max:25\',\r\n        \'email\'   =&amp;gt; \'email\',\r\n    ]);\r\nif(true !== $result){\r\n    // 验证失败 输出错误信息\r\n    dump($result);\r\n}&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;namespace app\\index\\validate;\r\n\r\nuse think\\Validate;\r\n\r\nclass User extends Validate\r\n{\r\n    protected $rule = [\r\n        \'name\'  =&amp;gt;  \'require|max:25\',\r\n        \'email\' =&amp;gt;  \'email\',\r\n    ];\r\n\r\n    protected $message = [&lt;/code&gt;&lt;/pre&gt;&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', null, null, '1478240644', '34', '0', '0', '1');
 INSERT INTO `think_article` VALUES ('8', 'b02603253a02d03a9be361be4709649b', '1', '18', '201', '如果你需要在控制器中进行验', '控制器,霜霉病,黄色', '如果你需要在控制器中进行验证，并且继承了\\think\\Controller的话，可以调用控制器类提供的validate方法进行验证，如下：$result=$th', '&lt;h1&gt;&lt;p&gt;如果你需要在控制器中进行验证，并且继承了\\think\\Controller的话，可以调用控制器类提供的validate方法进行验证，如下：&lt;/p&gt;&lt;pre&gt;&lt;code&gt;$result = $this-&amp;gt;validate(\r\n    [\r\n        \'name\'  =&amp;gt; \'thinkphp\',\r\n        \'email\' =&amp;gt; \'thinkphp@qq.com\',\r\n    ],\r\n    [\r\n        \'name\'  =&amp;gt; \'require|max:25\',\r\n        \'email\'   =&amp;gt; \'email\',\r\n    ]);\r\nif(true !== $result){\r\n    // 验证失败 输出错误信息\r\n    dump($result);\r\n}&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;namespace app\\index\\validate;\r\n\r\nuse think\\Validate;\r\n\r\nclass User extends Validate\r\n{\r\n    protected $rule = [\r\n        \'name\'  =&amp;gt;  \'require|max:25\',\r\n        \'email\' =&amp;gt;  \'email\',\r\n    ];\r\n\r\n    protected $message = [&lt;/code&gt;&lt;/pre&gt;&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', null, null, '1478240657', '52', '0', '0', '1');
-INSERT INTO `think_article` VALUES ('9', '8e4c327f92f5d47a03a896e94e893ea2', '1', '18', '201', '董明珠：格力手机会让你用上就不会放下', '网易直播,投资者,年轻人,企业家,直播间', '为什么市场上看不到格力手机？因为我们要做最完美的东西。曾经称“直播让自己感觉更年轻”的董明珠今日又进行了一场直播。上午10点，董明珠在网易直播间进行了一个小时的', '&lt;h1&gt;&lt;span style=&quot;font-size: 1.4rem; font-weight: 400;&quot;&gt;为什么市场上看不到格力手机？因为我们要做最完美的东西。&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;&lt;section&gt;&lt;img src=&quot;https://pic.36krcnd.com/avatar/201611/04053237/sqzvjjbxwm3sr7l0.png!heading&quot; alt=&quot;董明珠：格力手机会让你用上就不会放下&quot;&gt;&lt;/section&gt;&lt;p&gt;&lt;/p&gt;&lt;section&gt;&lt;p&gt;曾经称&ldquo;直播让自己感觉更年轻&rdquo;的董明珠今日又进行了一场直播。&lt;/p&gt;&lt;p&gt;上午10点，董明珠在网易直播间进行了一个小时的现场直播，期间有113万人观看，人气爆棚。&lt;/p&gt;&lt;p&gt;期间，董明珠就收购珠海银隆及股东会上发飙的事情进行了解释。她认为收购会为股东们带来很好的发展，会用最后的结果来证明谁对谁错。而关于股东会上发飙的事情，她称是媒体的误传。&lt;/p&gt;&lt;p&gt;相比雷军一直感受到的来自网友的浓浓&ldquo;黑意&rdquo;，董明珠称不觉得网友们在黑她，反而感受到了别人的尊重。她相信雷军会找到突破口，但并不担心小米对格力手机构成的威胁。&lt;/p&gt;&lt;p&gt;她认为格力手机会让你用上就不会放下，并对市场关于格力手机的争论进行了解释：一是为什么在市场上看不到格力手机？因为要做最完美的东西，不希望一年就换手机，希望可以用上三、五年，所以会对手机持续进行软件升级，用着老款的手机享受着最新的技术。二是格力手机为什么没有那么大销量？是因为没有外包加工，而是自制，希望从研发、生产到销售领域，这个产品都是完美的。&lt;/p&gt;&lt;p&gt;对于年轻人的发展，她提到，每个不同的岗位都可以把一个人培养出来，只是看你自己是否去努力，是否去挑战，不是某个岗位让你成功，而是你自己的努力决定了自己是否可以成功。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;以下为根据网易直播整理的直播实录：&lt;/strong&gt;&lt;/p&gt;&lt;h3&gt;别人没有黑我，感受到的是他们对我的尊重&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Q：感觉格力的产品在走多元化的道路。当初收购珠海银隆的初衷是什么？&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;今天已经进入环保的时代，大家看着北京的雾霾都知道要环保。环保是一个大课题，每个企业家，每个企业都应该围绕环保、智能、节能去做我们的产品开发。&lt;/p&gt;&lt;p&gt;股东大会事件，其实都是媒体的误导。那天的情况是误传，我没有现场发飙，只是我陈述了一个现状。当时有三个持有一百股的人，可能是刚买的一百股，明显是进来捣乱的。花几千块，就可以进来搅合。这个不重要，允许别人发声。关键是你自己做得是不是对，对要获利的投资者带来什么很重要，对社会、对员工带来什么很重要。因为企业的发展，让员工生活提升，福利待遇提高，这个很重要。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Q：您说收购一个企业是把自己的幸福建立在别人的痛苦之上，但您现在正在这样做。&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;我从来没有讲过这话。我认为收购也好，合作也好，不能把自己的幸福建立在别人的痛苦之上，是这个意思。收购也好，合并也好，不能让对方死，自己活下来，而是通过合作让双方取得更大的发展，这是双赢。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Q：很多网友认为您是网红，但有时候会招黑，可以说现在有很多企业家，会特别在意自己的形象，比如说我穿得漂不漂亮，对言谈举止发到网上很在意。您在网上会有一些生气、发飙的照片，您会不会介意？&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;每个人都有很多瞬间，你抓拍到的瞬间可能不是最漂亮的，你感觉有很多招黑，但我感受到的是别人对我的尊重。比如昨天我在酒店碰到一个小男孩，他跑过来说你是董姐吧？按年龄他应该喊我阿姨，但他喊我董姐，可能从距离上感觉我比较年轻。他说很遗憾，今天跑步没带照相机，真想跟你合影。在火车上我们也经常遇到这样的情况。我想这也是因为格力造就了这样的局面，如果换一个不好的产品可能没有这样的效果。不要为别人改变你的初衷，要记住自己的使命，让中国制造在世界上落地有声。所以今天格力不仅要做世界第一，还要做领跑者，要不断挑战自己，创造别人没有的产品。&lt;/p&gt;&lt;h3&gt;要做完美的格力手机，不担心小米&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Q：格力空调覆盖很广，格力手机怎么样？因为您曾经摔过手机。&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;董明珠：开股东会的时候，有股民站起来说冲着空调未必买格力股票，之所以买格力股票是因为有格力手机。他本人已经六次买格力手机，自己用得好，一次、二次买，又买来送朋友。昨天晚上见了一个朋友，他买了四次格力手机，他说最早买3300元，现在买3599，你们涨价了我还买，因为用得好。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;第一为什么市场上看不到格力手机？因为我们要做最完美的东西。&lt;/strong&gt;手机是每个人都必不可少的，我们不愿意一年就换手机，希望可以用上三、五年。所以我们会对手机持续进行软件升级，让你用着老款的手机享受着最新的技术。&lt;strong&gt;第二格力手机为什么没有那么大量？是因为我们没有外包加工，而是自制，希望从研发、生产到销售领域，这个产品都是完美的。&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Q：格力手机在格力集团起什么作用？地位是什么？&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;不是这个产品起什么作用，我们更多的是从消费者的需求思考，而不是因为我的企业需要做这件事。企业需要不重要，市场需要最重要。只要有市场需要，企业的需求自然而然随着市场需要变化。创造是最重要的，好的企业是发掘新的需求。格力有很多产品，所有的产品都可以带来改变。&lt;strong&gt;特别是格力手机，让你用上就不会放下。&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Q：像小米这样的企业也在跟传统的家电企业合作，对这样的合作形式您会有担心和压力吗？&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;我没有担心，每个人都有自己的选择。你可以让雷总来回答你，问问他和美的合作到什么样，这个只有他知道，我不知道。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Q：您感觉什么让小米出现一些问题？&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;雷军原来是在珠海金山，是软件企业出来的，很多制造不是软件可以替代的。现在都注重轻资产，没有重资产。轻资产可以存在吗？我相信雷军即使遇到困难，也可以提早找到突破口。&lt;/p&gt;&lt;h3&gt;格力的成功是因为专注&lt;br&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Q：除了手机和汽车领域，格力还会关注其他的领域吗？&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;我觉得格力电器专注是最重要的，不是因为天花板到了，所以我们进入另外的领域，&lt;strong&gt;格力的成功是因为专注。&lt;/strong&gt;这么多年下来，我们的专注已经让我们培养出一个团队，现在有七家研究院，8000多个技术人员。现在我们的人员已经开始被挖，说明你的人能力好，奥克斯也来挖人，几百万的年薪来挖人。有人会因为利益要走，我们不阻挡，格力愿意做培养人才的摇篮。&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Q：现在有很多电动汽车厂商，像特斯拉，您怎么看待未来可能成为格力新能源竞争对手的公司？&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;其实大家在技术上可以交流，学习、提升、创新，这才是真正有价值的应用。但现在我们一讲竞争，把某某企业和某某企业一比，好像就是你死我活的事，死不死是企业自己说得算，自己不努力，必死无疑，努力就有生存空间，只是看谁给消费者带来最满意的东西。&lt;/p&gt;&lt;p&gt;今年小米的业绩不是很好，网友上说雷军的日子不太好过。雷军好不好过，跟这些人有什么关系？从企业家内心来讲，不会不想把企业做好，各种原因导致他不在前面，但未必活不下去。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Q：对格力近几年的表现怎么看？&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;过去空调行业低质低价是很平常&lt;/p&gt;&lt;/section&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', null, null, '1478242259', '44', '0', '0', '1');
+INSERT INTO `think_article` VALUES ('9', '8e4c327f92f5d47a03a896e94e893ea2', '1', '18', '201', '董明珠：格力手机会让你用上就不会放下', '网易直播,投资者,年轻人,企业家,直播间', '为什么市场上看不到格力手机？因为我们要做最完美的东西。曾经称“直播让自己感觉更年轻”的董明珠今日又进行了一场直播。上午10点，董明珠在网易直播间进行了一个小时的', '&lt;h1&gt;&lt;span style=&quot;font-size: 1.4rem; font-weight: 400;&quot;&gt;为什么市场上看不到格力手机？因为我们要做最完美的东西。&lt;/span&gt;&lt;br&gt;&lt;/h1&gt;&lt;section&gt;&lt;img src=&quot;https://pic.36krcnd.com/avatar/201611/04053237/sqzvjjbxwm3sr7l0.png!heading&quot; alt=&quot;董明珠：格力手机会让你用上就不会放下&quot;&gt;&lt;/section&gt;&lt;p&gt;&lt;/p&gt;&lt;section&gt;&lt;p&gt;曾经称&ldquo;直播让自己感觉更年轻&rdquo;的董明珠今日又进行了一场直播。&lt;/p&gt;&lt;p&gt;上午10点，董明珠在网易直播间进行了一个小时的现场直播，期间有113万人观看，人气爆棚。&lt;/p&gt;&lt;p&gt;期间，董明珠就收购珠海银隆及股东会上发飙的事情进行了解释。她认为收购会为股东们带来很好的发展，会用最后的结果来证明谁对谁错。而关于股东会上发飙的事情，她称是媒体的误传。&lt;/p&gt;&lt;p&gt;相比雷军一直感受到的来自网友的浓浓&ldquo;黑意&rdquo;，董明珠称不觉得网友们在黑她，反而感受到了别人的尊重。她相信雷军会找到突破口，但并不担心小米对格力手机构成的威胁。&lt;/p&gt;&lt;p&gt;她认为格力手机会让你用上就不会放下，并对市场关于格力手机的争论进行了解释：一是为什么在市场上看不到格力手机？因为要做最完美的东西，不希望一年就换手机，希望可以用上三、五年，所以会对手机持续进行软件升级，用着老款的手机享受着最新的技术。二是格力手机为什么没有那么大销量？是因为没有外包加工，而是自制，希望从研发、生产到销售领域，这个产品都是完美的。&lt;/p&gt;&lt;p&gt;对于年轻人的发展，她提到，每个不同的岗位都可以把一个人培养出来，只是看你自己是否去努力，是否去挑战，不是某个岗位让你成功，而是你自己的努力决定了自己是否可以成功。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;以下为根据网易直播整理的直播实录：&lt;/strong&gt;&lt;/p&gt;&lt;h3&gt;别人没有黑我，感受到的是他们对我的尊重&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Q：感觉格力的产品在走多元化的道路。当初收购珠海银隆的初衷是什么？&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;今天已经进入环保的时代，大家看着北京的雾霾都知道要环保。环保是一个大课题，每个企业家，每个企业都应该围绕环保、智能、节能去做我们的产品开发。&lt;/p&gt;&lt;p&gt;股东大会事件，其实都是媒体的误导。那天的情况是误传，我没有现场发飙，只是我陈述了一个现状。当时有三个持有一百股的人，可能是刚买的一百股，明显是进来捣乱的。花几千块，就可以进来搅合。这个不重要，允许别人发声。关键是你自己做得是不是对，对要获利的投资者带来什么很重要，对社会、对员工带来什么很重要。因为企业的发展，让员工生活提升，福利待遇提高，这个很重要。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Q：您说收购一个企业是把自己的幸福建立在别人的痛苦之上，但您现在正在这样做。&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;我从来没有讲过这话。我认为收购也好，合作也好，不能把自己的幸福建立在别人的痛苦之上，是这个意思。收购也好，合并也好，不能让对方死，自己活下来，而是通过合作让双方取得更大的发展，这是双赢。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Q：很多网友认为您是网红，但有时候会招黑，可以说现在有很多企业家，会特别在意自己的形象，比如说我穿得漂不漂亮，对言谈举止发到网上很在意。您在网上会有一些生气、发飙的照片，您会不会介意？&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;每个人都有很多瞬间，你抓拍到的瞬间可能不是最漂亮的，你感觉有很多招黑，但我感受到的是别人对我的尊重。比如昨天我在酒店碰到一个小男孩，他跑过来说你是董姐吧？按年龄他应该喊我阿姨，但他喊我董姐，可能从距离上感觉我比较年轻。他说很遗憾，今天跑步没带照相机，真想跟你合影。在火车上我们也经常遇到这样的情况。我想这也是因为格力造就了这样的局面，如果换一个不好的产品可能没有这样的效果。不要为别人改变你的初衷，要记住自己的使命，让中国制造在世界上落地有声。所以今天格力不仅要做世界第一，还要做领跑者，要不断挑战自己，创造别人没有的产品。&lt;/p&gt;&lt;h3&gt;要做完美的格力手机，不担心小米&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Q：格力空调覆盖很广，格力手机怎么样？因为您曾经摔过手机。&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;董明珠：开股东会的时候，有股民站起来说冲着空调未必买格力股票，之所以买格力股票是因为有格力手机。他本人已经六次买格力手机，自己用得好，一次、二次买，又买来送朋友。昨天晚上见了一个朋友，他买了四次格力手机，他说最早买3300元，现在买3599，你们涨价了我还买，因为用得好。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;第一为什么市场上看不到格力手机？因为我们要做最完美的东西。&lt;/strong&gt;手机是每个人都必不可少的，我们不愿意一年就换手机，希望可以用上三、五年。所以我们会对手机持续进行软件升级，让你用着老款的手机享受着最新的技术。&lt;strong&gt;第二格力手机为什么没有那么大量？是因为我们没有外包加工，而是自制，希望从研发、生产到销售领域，这个产品都是完美的。&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Q：格力手机在格力集团起什么作用？地位是什么？&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;不是这个产品起什么作用，我们更多的是从消费者的需求思考，而不是因为我的企业需要做这件事。企业需要不重要，市场需要最重要。只要有市场需要，企业的需求自然而然随着市场需要变化。创造是最重要的，好的企业是发掘新的需求。格力有很多产品，所有的产品都可以带来改变。&lt;strong&gt;特别是格力手机，让你用上就不会放下。&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Q：像小米这样的企业也在跟传统的家电企业合作，对这样的合作形式您会有担心和压力吗？&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;我没有担心，每个人都有自己的选择。你可以让雷总来回答你，问问他和美的合作到什么样，这个只有他知道，我不知道。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Q：您感觉什么让小米出现一些问题？&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;雷军原来是在珠海金山，是软件企业出来的，很多制造不是软件可以替代的。现在都注重轻资产，没有重资产。轻资产可以存在吗？我相信雷军即使遇到困难，也可以提早找到突破口。&lt;/p&gt;&lt;h3&gt;格力的成功是因为专注&lt;br&gt;&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Q：除了手机和汽车领域，格力还会关注其他的领域吗？&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;我觉得格力电器专注是最重要的，不是因为天花板到了，所以我们进入另外的领域，&lt;strong&gt;格力的成功是因为专注。&lt;/strong&gt;这么多年下来，我们的专注已经让我们培养出一个团队，现在有七家研究院，8000多个技术人员。现在我们的人员已经开始被挖，说明你的人能力好，奥克斯也来挖人，几百万的年薪来挖人。有人会因为利益要走，我们不阻挡，格力愿意做培养人才的摇篮。&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Q：现在有很多电动汽车厂商，像特斯拉，您怎么看待未来可能成为格力新能源竞争对手的公司？&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;其实大家在技术上可以交流，学习、提升、创新，这才是真正有价值的应用。但现在我们一讲竞争，把某某企业和某某企业一比，好像就是你死我活的事，死不死是企业自己说得算，自己不努力，必死无疑，努力就有生存空间，只是看谁给消费者带来最满意的东西。&lt;/p&gt;&lt;p&gt;今年小米的业绩不是很好，网友上说雷军的日子不太好过。雷军好不好过，跟这些人有什么关系？从企业家内心来讲，不会不想把企业做好，各种原因导致他不在前面，但未必活不下去。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Q：对格力近几年的表现怎么看？&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;strong&gt;董明珠：&lt;/strong&gt;过去空调行业低质低价是很平常&lt;/p&gt;&lt;/section&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', null, null, '1478242259', '131', '0', '0', '1');
 INSERT INTO `think_article` VALUES ('10', '6f06e9bed737d1473b3778ff3b5c2ad2', '1', '18', '201', '抽多少支烟会伤肺？', '实验室,吸烟者,图片,国家,健康', '众所周知，吸烟有害健康，最新研究表明，吸烟不仅伤肺，还会引起细胞的DNA突变。根据科学杂志的报道，洛斯阿拉莫斯国家实验室的研究人员比较了来自1,000名非吸烟者', '&lt;h1&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;img src=&quot;https://pic.36krcnd.com/avatar/201611/04041856/cmpe7bq2q2i43b36.jpg!heading&quot; alt=&quot;抽多少支烟会伤肺？&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;section&gt;&lt;p&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font size=&quot;3&quot;&gt;众所周知，吸烟有害健康，最新研究表明，吸烟不仅伤肺，还会引起细胞的 DNA 突变。&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font size=&quot;3&quot;&gt;根据科学杂志的报道，&lt;a href=&quot;https://www.baidu.com/link?url=ABbUxnS2PsfztVBhfkYTXZbiaQToE7sRpqF71UQzqFgqm3HJpqQ8y9Bl3kN2bbYPZwpQVFYyn4p39Ohnk0mJPVGtyiZ28KeMfsoecItf_dvInrdbU28-m12b8bKvtWkTBAYnawCXjELvvlyIA_o5t137Pmil8I98pENlrt6mxrHSlP-donCBbCgCwZp4ImKxj4KgWrrHmj1A0dV6geqYmSM8MruyLRYMEJIWB7YBLze&amp;amp;wd=&amp;amp;eqid=9d68f3a60002292300000003581c0d3e&quot;&gt;洛斯阿拉莫斯国家实验室&lt;/a&gt;的研究人员比较了来自 1,000 名非吸烟者和 2,500 名吸烟者的肿瘤组织 DNA，由此确定了吸烟对身体组织细胞&amp;nbsp;DNA&amp;nbsp;突变带来的影响。&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;img alt=&quot;抽多少支烟会伤肺？&quot; src=&quot;https://pic.36krcnd.com/avatar/201611/04042601/cio0b55g2q7z58xr.jpg!1200&quot;&gt;&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font size=&quot;3&quot;&gt;图片来自洛斯阿拉莫斯国家实验室&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font size=&quot;3&quot;&gt;根据图片内容，如果你每天抽一包烟，抽一年的话，每个肺细胞约经历 150 次突变，每个喉癌细胞突变 97 次，每个咽细胞突变 39 次，每个肝细胞突变 6 次，每个膀胱细胞突变 18 次，每个口腔细胞突变 23 次。对于肺部来说，49支烟就会导致一次 DNA 突变。&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font size=&quot;3&quot;&gt;那么这些数据意味着什么呢？虽然 DNA 突变不一定会导致癌症，不过这的确会加大患上的癌症的风险。&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font size=&quot;3&quot;&gt;《New Scientist》解释道：&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font size=&quot;3&quot;&gt;理论上讲，每个 DNA 突变都有可能引发一系列的遗传损伤，使细胞有癌变倾向。然而，我们目前还不知道吸烟引起的 DNA 突变转为癌症的概率，或者哪些突变类型可能是恶性较大的。&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;span style=&quot;font-weight: normal;&quot;&gt;&lt;font size=&quot;3&quot;&gt;该研究团队目前致力于确定吸烟相关突变转癌的概率。不过希望以上这些 DNA 突变数据能够给广大烟民在点燃一支烟之前带来多几秒的思考。&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;/section&gt;&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;', null, null, '1478242702', '62', '0', '0', '1');
 
 -- ----------------------------
@@ -172,16 +172,12 @@ CREATE TABLE `think_category` (
   `status` int(11) DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `think_category_id_index` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=202 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=236 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of think_category
 -- ----------------------------
-INSERT INTO `think_category` VALUES ('18', '0', '网页/UI', '14', '4', '1');
-INSERT INTO `think_category` VALUES ('94', '18', '网页素材', '14', '1', '1');
-INSERT INTO `think_category` VALUES ('95', '18', '手机APP素材', '14', '2', '1');
-INSERT INTO `think_category` VALUES ('96', '18', 'UI设计', '14', '3', '1');
-INSERT INTO `think_category` VALUES ('97', '0', '网页特效', '11', '6', '1');
+INSERT INTO `think_category` VALUES ('97', '0', 'jquery', '11', '6', '1');
 INSERT INTO `think_category` VALUES ('98', '97', '图片代码', '11', '0', '1');
 INSERT INTO `think_category` VALUES ('99', '97', '导航菜单', '11', '0', '1');
 INSERT INTO `think_category` VALUES ('100', '97', '选项卡/滑动门', '11', '0', '1');
@@ -270,7 +266,7 @@ INSERT INTO `think_category` VALUES ('183', '120', '网址导航', '10', '0', '1
 INSERT INTO `think_category` VALUES ('184', '120', '登录注册', '10', '0', '1');
 INSERT INTO `think_category` VALUES ('185', '120', '个人中心', '10', '0', '1');
 INSERT INTO `think_category` VALUES ('186', '120', 'app', '10', '0', '1');
-INSERT INTO `think_category` VALUES ('187', '0', 'thinkphp', '18', '8', '1');
+INSERT INTO `think_category` VALUES ('187', '0', 'thinkphp', '12', '8', '1');
 INSERT INTO `think_category` VALUES ('188', '187', 'Ajax', '12', '0', '1');
 INSERT INTO `think_category` VALUES ('189', '187', 'Curl', '12', '0', '1');
 INSERT INTO `think_category` VALUES ('190', '187', '上传', '12', '0', '1');
@@ -285,6 +281,38 @@ INSERT INTO `think_category` VALUES ('198', '187', '支付', '12', '0', '1');
 INSERT INTO `think_category` VALUES ('199', '187', '手机', '12', '0', '1');
 INSERT INTO `think_category` VALUES ('200', '187', '其他', '12', '0', '1');
 INSERT INTO `think_category` VALUES ('201', '187', '微信', '12', '0', '1');
+INSERT INTO `think_category` VALUES ('202', '0', '博客', '18', '1', '1');
+INSERT INTO `think_category` VALUES ('203', '202', '程序员那些事', '18', '0', '1');
+INSERT INTO `think_category` VALUES ('205', '202', '技术风向标', '18', '3', '1');
+INSERT INTO `think_category` VALUES ('207', '0', '问答', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('208', '207', '前端', '17', '1', '1');
+INSERT INTO `think_category` VALUES ('209', '207', '后端', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('210', '207', '系统环境', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('211', '209', 'nodejs', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('212', '209', 'php', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('213', '209', 'java', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('214', '209', 'python', '12', '0', '1');
+INSERT INTO `think_category` VALUES ('215', '208', 'html', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('216', '208', 'javascript', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('217', '208', 'css', '18', '0', '1');
+INSERT INTO `think_category` VALUES ('218', '208', 'json', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('219', '208', 'ajax', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('220', '208', 'bootstrap', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('221', '208', 'amazeui', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('222', '208', 'weui', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('223', '208', '其他', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('224', '210', 'windows', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('225', '210', 'linux', '18', '0', '1');
+INSERT INTO `think_category` VALUES ('226', '210', 'nginx', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('227', '210', 'apache', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('228', '210', 'iis', '18', '0', '1');
+INSERT INTO `think_category` VALUES ('229', '209', 'thinkphp', '17', '0', '1');
+INSERT INTO `think_category` VALUES ('230', '0', '工具箱', '13', '0', '1');
+INSERT INTO `think_category` VALUES ('231', '230', '格式化', '13', '0', '1');
+INSERT INTO `think_category` VALUES ('232', '230', '代码转换', '13', '0', '1');
+INSERT INTO `think_category` VALUES ('233', '230', '加密解密', '13', '0', '1');
+INSERT INTO `think_category` VALUES ('234', '230', '文字处理', '13', '0', '1');
+INSERT INTO `think_category` VALUES ('235', '230', '配色', '13', '0', '1');
 
 -- ----------------------------
 -- Table structure for `think_channel`
@@ -313,7 +341,7 @@ CREATE TABLE `think_channel` (
 -- ----------------------------
 INSERT INTO `think_channel` VALUES ('10', '0', '模板', 'template', 'b4c6afe2db70f7df3e14f9e7d73d4613', '', '', 'template', null, '6', '0', '1');
 INSERT INTO `think_channel` VALUES ('11', '0', 'jQuery', 'jquery', '437425a6ef9cc9266118ef69ec3540ed', '', '', 'code', null, '7', '1', '1');
-INSERT INTO `think_channel` VALUES ('12', '0', 'thinkphp', 'thinkphp', '11c6c955e34364d2c5ede8e94e782a21', '', '', 'article', null, '8', '1', '1');
+INSERT INTO `think_channel` VALUES ('12', '0', 'PHP', 'thinkphp', '11c6c955e34364d2c5ede8e94e782a21', '', '', 'article', null, '8', '1', '1');
 INSERT INTO `think_channel` VALUES ('13', '0', '工具箱', 'gongjuxiang', '77f31eb78fb2f9363e0d666c9cf607e2', '', '', 'code', null, '999', '0', '1');
 INSERT INTO `think_channel` VALUES ('17', '0', '问答', 'wenda', '4236ba96c442afefab0d9ef0cd004444', '', '', 'article', null, '9', '1', '1');
 INSERT INTO `think_channel` VALUES ('18', '0', '博客', 'blog', 'b90390e5bacf07976cc74da203f9ce2e', '', '', 'article', null, '0', '1', '1');
@@ -396,10 +424,10 @@ CREATE TABLE `think_navigation` (
 -- ----------------------------
 -- Records of think_navigation
 -- ----------------------------
-INSERT INTO `think_navigation` VALUES ('7', '0', '博客', 'blog', '0', '1', '1');
+INSERT INTO `think_navigation` VALUES ('7', '0', '话题', 'topic', '0', '1', '1');
 INSERT INTO `think_navigation` VALUES ('8', '0', '模板', 'template', '0', '1', '1');
 INSERT INTO `think_navigation` VALUES ('9', '0', 'jQuery', 'jquery', '0', '1', '1');
-INSERT INTO `think_navigation` VALUES ('10', '0', 'thinkphp', 'thinkphp', '0', '1', '1');
+INSERT INTO `think_navigation` VALUES ('10', '0', 'PHP', 'php', '0', '1', '1');
 INSERT INTO `think_navigation` VALUES ('11', '0', '问答', 'wenda', '0', '1', '1');
 INSERT INTO `think_navigation` VALUES ('12', '0', '工具箱', 'tools', '0', '1', '1');
 
@@ -477,7 +505,7 @@ CREATE TABLE `think_user` (
 -- ----------------------------
 -- Records of think_user
 -- ----------------------------
-INSERT INTO `think_user` VALUES ('1', '6440abe399f8cece728ff8f7f8fbba1c', 'admin', '18087990440', '57736c32c18a61e6b7fd80e45b88eb4c42b9584c', '1473672824', '127.0.0.1', '1481103698', '127.0.0.1', '1');
+INSERT INTO `think_user` VALUES ('1', '6440abe399f8cece728ff8f7f8fbba1c', 'admin', '18087990440', '57736c32c18a61e6b7fd80e45b88eb4c42b9584c', '1473672824', '127.0.0.1', '1481350423', '0.0.0.0', '1');
 
 -- ----------------------------
 -- Table structure for `think_user_avatar`

@@ -193,3 +193,8 @@ function get_useinfo($model='admin'){
 function baseurl(){
     return "http://".request()->host().request()->baseUrl();
 }
+function ctUrl($param){
+    $a = \app\api\Category::search('id',$param);
+    $c = \app\api\Channel::search_channel('id',$a['0']['type']);
+    return $c['alias'].'/'.$param.'.html';
+}

@@ -9,7 +9,7 @@ use app\api\Article;
  * Date: 2016/11/30
  * Time: 12:20
  */
-class blog extends Common {
+class Topic extends Common {
 
     public function datalists($catid=''){
         $getorder = input('get.order','default');
@@ -47,7 +47,7 @@ class blog extends Common {
      * @return mixed
      */
     public function lists(){
-        $catid = input('param.value','');
+        $catid = input('param.id','');
         $getorder = input('get.order','default');
 
         $cate = Category::search('id',$catid); //查询分类

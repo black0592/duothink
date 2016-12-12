@@ -6,7 +6,7 @@ namespace app\index\controller;
  * Date: 2016/11/30
  * Time: 12:20
  */
-class Wenda extends Common {
+class Question extends Common {
     public function index(){
         return $this->fetch();
     }

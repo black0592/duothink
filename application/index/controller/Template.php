@@ -1,7 +1,6 @@
 <?php
 namespace app\index\controller;
 use app\api\Category;
-
 /**
  * Created by PhpStorm.
  * User: imdante
@@ -13,7 +12,6 @@ class Template extends Common {
     public function index(){
         $category = Category::category(10);
         $this->assign('category',$category);
-
         return $this->fetch();
     }
     public function get_sub_category_json(){
@@ -24,6 +22,5 @@ class Template extends Common {
         }else{
             $this->result('',404,'null');
         }
-
     }
 }
