@@ -196,5 +196,5 @@ function baseurl(){
 function ctUrl($param){
     $a = \app\api\Category::search('id',$param);
     $c = \app\api\Channel::search_channel('id',$a['0']['type']);
-    return $c['alias'].'/'.$param.'.html';
+    return 'http://'.request()->host().'/'.$c['alias'].'/'.$param.'.html';
 }

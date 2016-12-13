@@ -34,7 +34,7 @@ return [
     'tools/:id' => 'index/tools/article',
     'tools' => 'index/tools/index',
 
-    'page/:id'   => ['page/index', ['method' => 'get'], ['id' => '\d+']],
+    'page/:id'   => ['topic/article', ['method' => 'get'], ['id' => '\d+']],
     'channel/:pid\d_:id\d'    => ['index/index/channel',['method' => 'get'], ['id' => '\d+']],
 
     //用户信息

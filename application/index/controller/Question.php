@@ -10,4 +10,12 @@ class Question extends Common {
     public function index(){
         return $this->fetch();
     }
+
+    public function lists(){
+        return $this->fetch();
+    }
+
+    public function article(){
+        return $this->fetch();
+    }
 }
