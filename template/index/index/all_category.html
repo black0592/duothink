@@ -1,0 +1,36 @@
+{extend name="common/index"/}
+{block name="title"}全部分类 - {/block}
+{block name="seo"}<meta name="keywords" content="{$config.keywords}">
+    <meta name="description" content="{$config.description}">{/block}
+{block name="searchbar"}
+{/block}
+{block name="top_right"}
+{include file="common/user_status"}
+{/block}
+{block name="content"}
+<ul class="am-avg-sm-3">
+    {volist name="list" id="vo"}
+    <li class="am-padding-xs">
+        <section class="am-panel am-panel-default am-radius">
+            <header class="am-panel-hd">
+                <h3 class="am-panel-title">{$vo.title}</h3>
+            </header>
+            <div class="am-panel-bd">
+                <div class="am-article-tag">
+                    {volist name="vo.child" id="v"}
+                    <a href="{$v.id|ctUrl}" class="am-tag">{$v.title}</a>
+                    {notempty name="v.child"}
+                    <div class="am-article-tag am-margin-bottom-xs">
+                        {volist name="v.child" id="vv"}
+                        <a href="{$vv.id|ctUrl}" class="am-tag">{$vv.title}</a>
+                        {/volist}
+                    </div>
+                    {/notempty}
+                    {/volist}
+                </div>
+            </div>
+        </section>
+    </li>
+    {/volist}
+</ul>
+{/block}

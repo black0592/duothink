@@ -1,5 +1,7 @@
 <?php
 namespace app\index\controller;
+use app\api\Category;
+
 /**
  * Created by PhpStorm.
  * User: imdante
@@ -8,6 +10,12 @@ namespace app\index\controller;
  */
 class Index extends Common {
     public function index(){
+        return $this->fetch();
+    }
+    public function all_category(){
+        $cateogry = Category::datalist();
+        $this->assign('list',unlimitedForChild($cateogry));
+
         return $this->fetch();
     }
 }

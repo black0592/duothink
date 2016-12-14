@@ -56,6 +56,7 @@ a:hover{
     position: relative;
     padding-right: 40px;
 }
+.am-nav-bar .am-nav>li>a:focus,
 .am-nav-bar .am-nav>li>a:hover{
     background-color: #1f6752;
     color: #fff;

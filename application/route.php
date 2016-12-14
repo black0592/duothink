@@ -36,6 +36,7 @@ return [
 
     'page/:id'   => ['topic/article', ['method' => 'get'], ['id' => '\d+']],
     'channel/:pid\d_:id\d'    => ['index/index/channel',['method' => 'get'], ['id' => '\d+']],
+    'all_category' => 'index/index/all_category',
 
     //用户信息
     'api_user_user_login' => 'user/account/user_login',
